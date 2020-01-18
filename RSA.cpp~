@@ -1,0 +1,12 @@
+#include <iostream>
+#include <vector>
+
+int main (  viod )  {
+  long long unsigned int p;
+  long long unsigned int q;
+
+
+
+
+  return(0);
+}
