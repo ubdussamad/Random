@@ -1,0 +1,43 @@
+#include <iostream>
+
+#define LIM_M 1000
+
+
+int main  ( void ) {
+  int max_pairs = 0;
+  int m_having_max_pairs = 0;
+
+  for ( int m = 1 ; m < LIM_M ; m++ ) {
+    int a = 1;
+    int b = 1;
+    int c = 1;
+    int pairs = 0;
+    for ( ; a < m ; a++ ) {
+
+      for ( ; b < (m-a) ; b++ ) {
+
+	for ( ; c < (m-a-b) ; c++ ) {
+
+	  if ( a + b + c == m ) {
+
+	    if ( a*a = b*b + c*c ) {
+
+	      // Then it's a solution
+	      pairs++;
+	    }
+	  }
+	}
+      }
+    }
+
+    if ( pairs > max_pairs ) {
+      max_pairs = pairs;
+      m_having_max_pairs = m;
+    }
+  }
+
+  std::cout << "\nM:" << m_having_max_pairs << "\nP:" << max_pairs << std::endl;
+  return(0);
+}
+      
+  
