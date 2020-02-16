@@ -1,0 +1,34 @@
+#include <iostream>
+
+char * uniqueChar (  char * str )  {
+  bool characters[256];
+
+  for ( char* tmp_str = str; *tmp_str != '\0' ; tmp_str++ ) {
+    //std::cout << std::typeof(*tmp_str) << std::endl;
+
+    if cha
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+    
+}
+
+}
+
+int main ( void )  {
+  char str [7] = "aabbcc";
+  char *  newString = (char *)uniqueChar(str);
+  std::cout << str << std::endl;
+  std::cout << "-------------------------------" << std::endl;
+  //std::cout << newString << std::endl;
+  return(0);
+}  
+  
+  
+  
+  
+
+    
+    
+      
