@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main ( void )  {
+
+  int max_mark = 0;
+  
+  struct node {
+    std::string name;
+    int marks;
+    int roll;
+    struct node * n;
+    struct node * p;
+  };
+  
+  long int log_length;
+  std::cin >> log_length;
+
+  int i = 0;
+  for (  ; i < log_length ; i++ ) {
+    std::cout << "HEllo\n\n";
+  }
+  
+  
+  return(0);
+}
+
+  
+  
