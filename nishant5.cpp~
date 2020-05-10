@@ -1,0 +1,38 @@
+#include <iostream>
+
+#define P std::cout <<
+
+int main ( void  )  {
+  P "\n\nthe div is: " << divide( 10 , 3 ) << "\n";
+}
+
+int divide(long int dividend, long int divisor) {
+  if (dividend == divisor) {
+    return 1;
+  }
+  if (divisor == 1) {
+    return dividend;
+  }
+  if (dividend == 0 || divisor == INT_MIN) {
+    return 0;
+  }
+  if (dividend == INT_MIN && divisor == -1) {
+    return INT_MAX;
+  }
+ 
+  long sign = (dividend < 0 ^ divisor < 0) ? -1 : 1;
+ 
+  long divid = labs(dividend);
+  long divis = labs(divisor);
+ 
+  long temp = 0;
+  long res = 0;
+  for (long i = 31; i >= 0; i--) {
+    if (temp + (divis << i) <= divid) {
+      temp = temp + (divis << i);
+      res = res + 1L << i;
+    }
+  }
+ 
+  return (res > INT_MAX) ? INT_MAX : sign * res;
+}
